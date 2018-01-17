@@ -1,0 +1,6 @@
+# Compress a folder
+$ tar -zcvf x.tar.gz path/
+
+# Extract a folder or into a specified directory 
+$ tar -zxvf x.tar.gz
+$ tar -zxvf x.tar.gz -C path/

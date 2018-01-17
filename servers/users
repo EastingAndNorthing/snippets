@@ -1,0 +1,2 @@
+# Add user with webroot as home directory, without shell access
+$ sudo adduser --home=/var/www/website.nl --shell=/bin/false website
