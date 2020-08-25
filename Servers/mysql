@@ -1,0 +1,8 @@
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('pass');
+
+
+SELECT User,Host FROM mysql.user;
+DROP USER 'root'@'localhost';
+CREATE USER 'root'@'%' IDENTIFIED BY 'FILL_PASSWORD_HERE';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
