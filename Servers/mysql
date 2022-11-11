@@ -1,5 +1,7 @@
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('pass');
 
+SET PASSWORD FOR root = 'root';
+
 
 SELECT User,Host FROM mysql.user;
 DROP USER 'root'@'localhost';
