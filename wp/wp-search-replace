@@ -1,0 +1,5 @@
+# --all-tables is required to convert elementor tables
+
+wp search-replace http://test.site.nl http://site.nl --all-tables
+
+wp search-replace http://site.nl https://site.nl --all-tables
