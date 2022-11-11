@@ -1,0 +1,5 @@
+sudo certbot certonly --webroot -w /var/www/$SITENAME/Web/ -d $SITENAME
+
+/usr/local/lsws/lsphp7x/etc/php/7.x/litespeed/php.ini
+
+pkill lsphp
