@@ -1,0 +1,3 @@
+sail composer dump-autoload
+
+sail artisan config:clear

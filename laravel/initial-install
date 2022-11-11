@@ -1,0 +1,9 @@
+# Install vendor files without docker
+composer install --ignore-platform-reqs
+
+# Laravel mysql container can break if there is no .env file
+# Try again: 
+<fix .env>
+sail down 
+sail down -v
+sail up

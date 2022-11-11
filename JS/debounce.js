@@ -20,16 +20,6 @@ function debounce(func, wait, immediate) {
     };
 };
 
-// EXAMPLE
-var searchDebounceFunction = debounce(function() {
-    searchPosts();
-}, 250);
-
-$(document).on('keyup', '.searchinput', searchDebounceFunction);
-
-// OR MORE EFFICIENT
 $(document).on('keyup', '.searchinput', debounce(function() {
     searchPosts();
 }, 250));
-
-
