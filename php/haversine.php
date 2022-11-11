@@ -3,7 +3,6 @@
 class LocationBasedEntity extends CustomPost
 {
 
-
     public static function queryByLocation($lat, $lng, $radius = 0)
     {
 

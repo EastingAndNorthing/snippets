@@ -1,3 +1,5 @@
+<?php
+
 $input = 'a very very very very very very very very very long string';
 
 $compressed = urlencode(base64_encode(gzcompress($input)));
