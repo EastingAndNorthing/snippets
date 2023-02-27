@@ -1,7 +1,7 @@
 $(document).ready(function($) {
 
     var $wrapper   = $('.sidebar');
-    var $stickyBox = $('.sidebar .contactPersonsOverview');
+    var $stickyBox = $('.sidebar .box');
     
     var stickyBoxOffsetTop = $stickyBox.offset().top;
 

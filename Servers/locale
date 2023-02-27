@@ -1,4 +1,0 @@
-sudo locale-gen nl_NL
-sudo locale-gen nl_NL.UTF-8
-
-sudo update-locale 

@@ -1,3 +1,0 @@
-BrowserMatch "Safari" nokeepalive
-BrowserMatch "AppleWebKit" nokeepalive
-BrowserMatch "CFNetwork" nokeepalive
