@@ -1,0 +1,22 @@
+# Place in /etc/apache2/conf-available (+ run a2enconf)
+<Macro VHost $host $docroot>
+  <VirtualHost *:80>
+
+    ServerName $host.test
+    DocumentRoot /var/www/$host/$docroot
+
+    <Directory /var/www/$host/$docroot>
+        Options +Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+  </VirtualHost>
+</Macro>
+
+# Usage:
+# Use VHost themosis htdocs
+# Use VHost pipeapp public
