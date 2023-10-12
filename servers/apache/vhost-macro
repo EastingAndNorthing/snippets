@@ -1,8 +1,11 @@
 # Place in /etc/apache2/conf-available (+ run a2enconf)
+
 <Macro VHost $host $docroot>
   <VirtualHost *:80>
 
-    ServerName $host.test
+    # <site>.localhost always maps to 127.0.0.1, no hosts file required
+    ServerName $host.localhost
+
     DocumentRoot /var/www/$host/$docroot
 
     <Directory /var/www/$host/$docroot>
