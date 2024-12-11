@@ -1,4 +1,11 @@
-php bin/console make:migration
-php ./bin/console doctrine:schema:create
-php ./bin/console doctrine:schema:update -f
-php ./bin/console doctrine:fixtures:load -n
+<?php
+
+/* Example with updating data */
+
+public function up(Schema $schema): void
+{
+    $this->addSql('ALTER TABLE sponsor ADD position INT NOT NULL');
++   $this->addSql('SET @current = -1');
++   $this->addSql('UPDATE sponsor SET position = (@current := @current + 1)');
+    $this->addSql('CREATE INDEX position_idx ON sponsor (position)');
+}
